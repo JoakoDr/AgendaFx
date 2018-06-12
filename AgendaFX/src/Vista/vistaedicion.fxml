@@ -10,8 +10,8 @@
    <children>
       <AnchorPane prefHeight="75.0" prefWidth="114.0" />
       <Button fx:id="btnNuevo" layoutX="88.0" layoutY="382.0" mnemonicParsing="false" text="Nuevo" />
-      <Button fx:id="btnEditar" layoutX="180.0" layoutY="382.0" mnemonicParsing="false" text="Editar" />
-      <Button fx:id="btnBorrar" layoutX="277.0" layoutY="382.0" mnemonicParsing="false" text="Borrar" />
+      <Button fx:id="btnEditar" layoutX="180.0" layoutY="382.0" mnemonicParsing="false" onAction="#EditarBot" text="Editar" />
+      <Button fx:id="btnBorrar" layoutX="277.0" layoutY="382.0" mnemonicParsing="false" onAction="#BorrarBot" text="Borrar" />
       <TableView layoutX="88.0" layoutY="75.0" prefHeight="225.0" prefWidth="227.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Nombre" />

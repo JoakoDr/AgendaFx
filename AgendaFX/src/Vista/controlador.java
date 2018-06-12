@@ -4,7 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.Main;
-import application.Persona;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -63,7 +62,7 @@ public class controlador implements Initializable {
 	}
 
 	public void setTxtTelefono(TextField txtTelefono) {
-		this.txtTelefono = txtTelefono;
+		controlador.txtTelefono = txtTelefono;
 	}
 
 	public static TextField getTxtApellido() {
@@ -71,7 +70,7 @@ public class controlador implements Initializable {
 	}
 
 	public void setTxtApellido(TextField txtApellido) {
-		this.txtApellido = txtApellido;
+		controlador.txtApellido = txtApellido;
 	}
 
 	public static TextField getTxtNombre() {
@@ -79,6 +78,30 @@ public class controlador implements Initializable {
 	}
 
 	public void setTxtNombre(TextField txtNombre) {
-		this.txtNombre = txtNombre;
+		controlador.txtNombre = txtNombre;
+	}
+
+	public int getIndx() {
+		return indx;
+	}
+
+	public void setIndx(int indx) {
+		this.indx = indx;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 }

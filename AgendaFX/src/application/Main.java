@@ -2,24 +2,21 @@ package application;
 	
 import java.io.IOException;
 
-import javax.swing.table.TableColumn;
-
 import Vista.controlador;
 import Vista.controlador1;
 import Vista.controladorFinal;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 //import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
 	 private static Stage stagePrincipal;
-	 private TableView<Persona> tabla = new TableView();
+	 private TableView<Persona> tabla = new TableView<Persona>();
 	    private AnchorPane rootPane;
 		private int indx;
 	
@@ -33,7 +30,11 @@ public class Main extends Application {
             Scene scene = new Scene(rootPane);
             stagePrincipal.setTitle("Contacto");
             stagePrincipal.setScene(scene);
+            
+            
+ 
             /*
+             * 
              * Añadimos las llamadas del main al Controlador y del controlador al main ***/
             controlador controller = loader.getController();
             controller.setProgramaPrincipal(this);
@@ -58,7 +59,7 @@ public class Main extends Application {
             Stage ventana = new Stage();
             ventana.setTitle("Agenda");
 
-
+            controladorFinal.getData();
             
       
             /* Le decimos a la ventana quién es la ventana original */
@@ -88,5 +89,17 @@ public class Main extends Application {
 	}
 	private Stage extracted(Stage stagePrincipal) {
 		return Main.stagePrincipal = stagePrincipal;
+	}
+	public int getIndx() {
+		return indx;
+	}
+	public void setIndx(int indx) {
+		this.indx = indx;
+	}
+	public TableView<Persona> getTabla() {
+		return tabla;
+	}
+	public void setTabla(TableView<Persona> tabla) {
+		this.tabla = tabla;
 	}
 }

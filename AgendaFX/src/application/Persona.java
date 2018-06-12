@@ -4,18 +4,18 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Persona {
 	
-	private final SimpleStringProperty primerNombre;
-	private final SimpleStringProperty primerApellido;
-	private final SimpleStringProperty email;
+	private static SimpleStringProperty primerNombre;
+	private static SimpleStringProperty primerApellido;
+	private static SimpleStringProperty email;
 	
 	public Persona(String pNombre, String pApellido , String email)
 	{
-		this.primerNombre = new SimpleStringProperty(pNombre);
-		this.primerApellido = new SimpleStringProperty(pApellido);
-		this.email = new SimpleStringProperty(email);
+		Persona.primerNombre = new SimpleStringProperty(pNombre);
+		Persona.primerApellido = new SimpleStringProperty(pApellido);
+		Persona.email = new SimpleStringProperty(email);
 		
 	}
-	public String getprimerNombre()
+	public static String getprimerNombre()
 	{
 		return primerNombre.get();
 	}
@@ -23,7 +23,7 @@ public class Persona {
 	{
 		primerNombre.set(pNombre);
 	}
-	public String getprimerApellido()
+	public static String getprimerApellido()
 	{
 		return primerApellido.get();
 	}
@@ -31,7 +31,7 @@ public class Persona {
 	{
 		primerApellido.set(pApellido);
 	}
-	public String getEmail()
+	public static String getEmail()
 	{
 		return email.get();
 	}
